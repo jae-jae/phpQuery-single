@@ -1,9 +1,12 @@
 # phpQuery-single
 phpQuery onefile composer.Continuous maintenance,Welcome PR.
 
-phpQuery单文件版本,持续维护，欢迎PR，是Querylist的依赖(http://querylist.cc ).
+`QueryList` base on phpQuery: https://github.com/jae-jae/QueryList
 
+phpQuery单文件版本,持续维护，欢迎PR.
 > phpQuery项目主页:http://code.google.com/p/phpquery/
+
+`QueryList`是基于phpQuery的采集工具: https://github.com/jae-jae/QueryList
 
 ## Composer Installation
 Packagist: https://packagist.org/packages/jaeger/phpquery-single
