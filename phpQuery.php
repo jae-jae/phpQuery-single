@@ -1987,13 +1987,13 @@ class phpQueryObject
 				break;
 			case 'eq':
 				$k = intval($args);
-                if ($k < 0) {
-                    $this->elements = array( $this->elements[count($this->elements)+$k] );
-                } else {
-                    $this->elements = isset($this->elements[$k])
-                        ? array($this->elements[$k])
-                        : array();
-                }
+				if ($k < 0) {
+				    $this->elements = array( $this->elements[count($this->elements)+$k] );
+				} else {
+				    $this->elements = isset($this->elements[$k])
+					? array($this->elements[$k])
+					: array();
+				}
 				break;
 			case 'gt':
 				$this->elements = array_slice($this->elements, $args+1);
