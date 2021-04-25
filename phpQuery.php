@@ -400,7 +400,7 @@ class DOMDocumentWrapper {
 				$this->document->resolveExternals = true;
 				$return = phpQuery::$debug === 2
 					? $this->document->loadXML($markup)
-					: @$this->document->loadXML($markup);
+					: $this->document->loadXML(htmlspecialchars($markup));
 			} else {
 				/** @link http://pl2.php.net/manual/en/libxml.constants.php */
 				$libxmlStatic = phpQuery::$debug === 2
