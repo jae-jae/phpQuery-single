@@ -325,7 +325,7 @@ class DOMDocumentWrapper {
 			$this->documentCreate($charset);
 			$return = phpQuery::$debug === 2
 				? $this->document->loadHTML($markup)
-				: @$this->document->loadHTML($markup);
+				: (phpversion() < 5.1 ? @$this->document->loadHTML($markup) : $this->document->loadHTML($markup, LIBXML_NOWARNING|LIBXML_NOERROR));
 			if ($return)
 				$this->root = $this->document;
 		}
