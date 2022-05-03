@@ -530,9 +530,9 @@ class DOMDocumentWrapper
 		$metaContentType = $matches[0][0];
 		$markup = substr($markup, 0, $matches[0][1])
 			. substr($markup, $matches[0][1] + strlen($metaContentType));
-		$headStart = stripos($markup, '<head>');
-		$markup = substr($markup, 0, $headStart + 6) . $metaContentType
-			. substr($markup, $headStart + 6);
+		$headStart = strpos($markup, '>', stripos($markup, '<head'));
+		$markup = substr($markup, 0, $headStart + 1) . $metaContentType
+			. substr($markup, $headStart + 1);
 		return $markup;
 	}
 	protected function charsetAppendToHTML($html, $charset, $xhtml = false)
